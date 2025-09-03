@@ -129,39 +129,35 @@ body {
   font-family: "Times New Roman", Times, serif;
 }
 
-/* —— FIXED BEHAVIOR CHECKBOXES —— */
-/* Use a simple grid that wraps cleanly; prevent iOS from breaking words per-letter */
+/* ✅ FIXED Behavior Options */
 .behavior-options {
-  display: grid;
-  grid-template-columns: 1fr;   /* 1 column on phones */
+  display: flex;
+  flex-direction: column;
   gap: 12px;
   margin: 10px 0;
-}
-
-@media (min-width: 600px) {
-  .behavior-options {
-    grid-template-columns: 1fr 1fr; /* 2 columns on tablets/desktop */
-  }
+  width: 100%;
 }
 
 .behavior-options label {
-  display: inline-flex;          /* checkbox + text stay on one line together */
-  align-items: center;
-  gap: 8px;
-  padding: 2px 0;
-  margin: 0;
-
-  /* Text safety: do NOT break words into single letters */
-  white-space: normal;
-  word-break: normal;
+  display: flex;
+  align-items: flex-start;    /* aligns checkbox with first line */
+  gap: 10px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.4;
+  white-space: normal;        /* prevents breaking into single letters */
+  word-break: keep-all;       
   overflow-wrap: break-word;
-  -webkit-hyphens: none;
-  hyphens: none;
-  letter-spacing: normal;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .behavior-options input[type="checkbox"] {
-  flex: 0 0 auto;                /* checkbox keeps its size */
+  width: 18px !important;
+  height: 18px !important;
+  flex-shrink: 0;
+  margin-top: 2px;            /* keeps it aligned with text */
 }
 
 /* Policy text */
