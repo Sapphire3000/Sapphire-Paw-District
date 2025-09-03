@@ -217,16 +217,17 @@ footer .credit a:hover {
   }
 
   /* Fix social media buttons to fit screen */
+  /* Ensure the links always stay in a 2x2 grid on smaller screens */
+@media screen and (max-width: 500px) {
   .links {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 15px;
-    padding: 0 10px;
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+    gap: 20px 20px; /* adjust spacing to fit smaller screens */
+    padding: 0 10px; /* add some padding so it doesn't touch edges */
   }
 
   .link {
-    font-size: 16px;
-    padding: 12px 15px;
-    min-width: 0; /* ensures buttons shrink on small screens */
+    min-width: auto; /* let it shrink as needed */
+    font-size: 16px; /* optional: slightly smaller text for mobile */
+    padding: 15px 10px; /* adjust padding to make it fit nicely */
   }
-
 }
