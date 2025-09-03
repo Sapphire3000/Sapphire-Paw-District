@@ -1,3 +1,4 @@
+/* Base Styles */
 body {
   margin: 0;
   min-height: 100vh;
@@ -26,7 +27,7 @@ body {
   margin: 20px 0;
 }
 
-/* Wrapper around image + description */
+/* Profile Wrap */
 .profile-wrap {
   display: flex;
   flex-direction: row;
@@ -48,7 +49,7 @@ body {
   display: block;
 }
 
-/* About Me Section */
+/* About Me */
 .about-me {
   flex: 1;
   text-align: left;
@@ -65,9 +66,11 @@ body {
   font-family: "Times New Roman", Times, serif;
   font-size: 18px;
   color: #333;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
-/* Links Section - Centered 2x2 Grid */
+/* Links */
 .links {
   display: grid;
   grid-template-columns: repeat(2, auto);
@@ -96,7 +99,7 @@ body {
   color: #050C9C;
 }
 
-/* Inquiry Form Section */
+/* Inquiry Form */
 .inquiry-form {
   max-width: 700px;
   margin: 60px auto;
@@ -129,37 +132,38 @@ body {
   font-family: "Times New Roman", Times, serif;
 }
 
-
-/* Container for checkboxes */
+/* Behavior Checkboxes */
 .behavior-options {
   display: flex;
-  flex-direction: column; /* stack each option vertically */
-  gap: 8px;               /* space between options */
+  flex-wrap: wrap;
+  gap: 12px;
   margin: 10px 0;
 }
 
-/* Each label with checkbox and text inline */
 .behavior-options label {
-  display: flex;          /* inline the checkbox and text */
-  align-items: center;    /* vertical alignment */
-  gap: 6px;               /* space between box and text */
+  display: flex;
+  align-items: center; /* ensures checkbox and text are inline */
+  gap: 6px;
+  flex: 1 1 300px;
+  min-width: 220px;
+  white-space: normal;
+  word-break: break-word;
   font-weight: normal;
 }
 
-/* Override full-width for checkboxes */
 .behavior-options input[type="checkbox"] {
-  width: auto;            /* remove the 100% width from generic input rule */
-  margin: 0;              /* remove extra default margin */
+  vertical-align: middle;
+  margin-right: 10px;
 }
 
-/* Policy text */
+/* Policy */
 .policy {
   font-size: 14px;
   color: #333;
   margin: 15px 0;
 }
 
-/* Center the Submit Button */
+/* Submit Button */
 .inquiry-form button[type="submit"] {
   display: block;
   margin: 20px auto 0 auto;
@@ -200,4 +204,51 @@ footer .credit a {
 
 footer .credit a:hover {
   color: #1e90ff;
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 600px) {
+  .profile-wrap {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-me {
+    text-align: center;
+  }
+
+  .behavior-options {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .links {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .business-name {
+    font-size: 35px;
+  }
+
+  .about-me h2 {
+    font-size: 22px;
+  }
+
+  .about-me p {
+    font-size: 16px;
+  }
+
+  .inquiry-form h2 {
+    font-size: 22px;
+  }
+
+  .inquiry-form input,
+  .inquiry-form select,
+  .inquiry-form textarea,
+  .inquiry-form button {
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
