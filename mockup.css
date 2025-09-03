@@ -140,17 +140,17 @@ body {
 
 .behavior-options label {
   display: flex;
-  align-items: center; /* keeps checkbox aligned with text */
+  align-items: center; /* keeps checkbox and text aligned vertically */
   gap: 6px; /* space between checkbox and description */
-  flex: 1 1 auto; /* allows wrapping on smaller screens */
-  min-width: 0; /* allows shrink */
-  white-space: normal;
+  flex: 1 1 100%; /* allows wrapping on smaller screens */
+  max-width: 100%; /* prevents label from stretching too far */
+  white-space: normal; /* lets text wrap */
   word-break: break-word;
   font-weight: normal;
 }
 
 .behavior-options input[type="checkbox"] {
-  flex-shrink: 0;
+  flex-shrink: 0; /* keeps checkbox size fixed */
 }
 
 /* Policy text */
