@@ -129,35 +129,29 @@ body {
   font-family: "Times New Roman", Times, serif;
 }
 
-/* ✅ FIXED Behavior Options */
+
+/* Container for checkboxes */
 .behavior-options {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  flex-direction: column; /* stack each option vertically */
+  gap: 8px;               /* space between options */
   margin: 10px 0;
-  width: 100%;
 }
 
+/* Each label with checkbox and text inline */
 .behavior-options label {
-  display: flex;
-  align-items: flex-start;    /* aligns checkbox with first line */
-  gap: 10px;
+  display: flex;          
+  align-items: center;    
+  gap: 6px;               
   font-weight: normal;
-  font-size: 16px;
-  line-height: 1.4;
-  white-space: normal;        /* prevents breaking into single letters */
-  word-break: keep-all;       
-  overflow-wrap: break-word;
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
+  line-height: 1.4;        /* keep text neat */
+  flex-wrap: wrap;         /* wrap text instead of pushing across */
 }
 
+/* Override full-width for checkboxes */
 .behavior-options input[type="checkbox"] {
-  width: 18px !important;
-  height: 18px !important;
-  flex-shrink: 0;
-  margin-top: 2px;            /* keeps it aligned with text */
+  width: auto;
+  margin: 0;
 }
 
 /* Policy text */
@@ -208,4 +202,22 @@ footer .credit a {
 
 footer .credit a:hover {
   color: #1e90ff;
+}
+
+/* --- Responsive Fixes for iPhone + iPad --- */
+@media (max-width: 1024px) {
+  /* Fix About Me section stacking neatly */
+  .profile-wrap {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-me {
+    text-align: center;
+  }
+
+  /* Behavior section fix */
+  .behavior-options label {
+    flex-wrap: wrap;         
+    align-items: flex-start; 
+  }
 }
