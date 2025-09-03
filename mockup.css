@@ -1,18 +1,20 @@
 body {
   margin: 0;
-  min-height: 100vh;
-  font-family: "Times New Roman", Times, serif;
+  font-family: Arial, sans-serif;
+
   background: repeating-linear-gradient(
-    to right,
-    #050C9C 0px,
-    #050C9C 100px,
-    #3ABEF9 100px,
-    #3ABEF9 200px,
-    #A7E6FF 200px,
-    #A7E6FF 300px,
-    #FFD700 300px,
-    #FFD700 305px
+    to bottom,
+    #0a1f44, /* dark navy */
+    #0a1f44 100px,
+    #3a6ea5, /* baby blue */
+    #3a6ea5 200px,
+    #d4af37, /* gold accent */
+    #d4af37 210px,
+    #87ceeb, /* light sky blue */
+    #87ceeb 310px
   );
+
+  background-attachment: fixed;
 }
 
 /* Business Name */
