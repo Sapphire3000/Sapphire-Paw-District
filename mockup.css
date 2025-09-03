@@ -231,3 +231,24 @@ footer .credit a:hover {
     padding: 15px 10px; /* adjust padding to make it fit nicely */
   }
 }
+  /* iPhone layout adjustments for About Me section */
+@media screen and (max-width: 500px) {
+  .profile-wrap {
+    flex-direction: row;       /* keep image and text side by side */
+    flex-wrap: wrap;           /* allow wrapping if needed */
+    justify-content: center;   /* center content */
+    gap: 15px;                 /* small gap between image and text */
+  }
+
+  .empress-cyrus img {
+    flex-shrink: 0;           /* prevent image from shrinking too much */
+    width: 180px;             /* slightly smaller than desktop */
+    height: 180px;
+  }
+
+  .about-me {
+    flex: 1 1 200px;          /* text can shrink or grow as needed */
+    text-align: left;         /* keep text aligned left */
+    margin: 0;
+  }
+}
