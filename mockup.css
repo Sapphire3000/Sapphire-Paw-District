@@ -1,18 +1,16 @@
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-
   background: repeating-linear-gradient(
-    to bottom,
+    90deg,
     #0a1f44, /* dark navy */
     #0a1f44 100px,
-    #3a6ea5, /* baby blue */
+    #3a6ea5 100px, /* medium blue */
     #3a6ea5 200px,
-    #d4af37, /* gold accent */
-    #d4af37 210px,
-    #87ceeb, /* light sky blue */
-    #87ceeb 310px
+    #87ceeb 200px, /* baby blue */
+    #87ceeb 300px,
+    #d4af37 300px, /* gold accent */
+    #d4af37 310px
   );
+}
 
   background-attachment: fixed;
 }
