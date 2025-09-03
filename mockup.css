@@ -37,7 +37,6 @@ body {
   background-color: white;
   border-radius: 10px;
   padding: 20px;
-  flex-wrap: wrap; /* allows wrapping on smaller screens */
 }
 
 /* Profile Image */
@@ -130,27 +129,39 @@ body {
   font-family: "Times New Roman", Times, serif;
 }
 
-/* Behavior checkboxes - responsive fix */
+/* —— FIXED BEHAVIOR CHECKBOXES —— */
+/* Use a simple grid that wraps cleanly; prevent iOS from breaking words per-letter */
 .behavior-options {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr;   /* 1 column on phones */
   gap: 12px;
   margin: 10px 0;
 }
 
+@media (min-width: 600px) {
+  .behavior-options {
+    grid-template-columns: 1fr 1fr; /* 2 columns on tablets/desktop */
+  }
+}
+
 .behavior-options label {
-  display: flex;
-  align-items: center; /* keeps checkbox and text aligned vertically */
-  gap: 6px; /* space between checkbox and description */
-  flex: 1 1 100%; /* allows wrapping on smaller screens */
-  max-width: 100%; /* prevents label from stretching too far */
-  white-space: normal; /* lets text wrap */
-  word-break: break-word;
-  font-weight: normal;
+  display: inline-flex;          /* checkbox + text stay on one line together */
+  align-items: center;
+  gap: 8px;
+  padding: 2px 0;
+  margin: 0;
+
+  /* Text safety: do NOT break words into single letters */
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: break-word;
+  -webkit-hyphens: none;
+  hyphens: none;
+  letter-spacing: normal;
 }
 
 .behavior-options input[type="checkbox"] {
-  flex-shrink: 0; /* keeps checkbox size fixed */
+  flex: 0 0 auto;                /* checkbox keeps its size */
 }
 
 /* Policy text */
@@ -201,33 +212,4 @@ footer .credit a {
 
 footer .credit a:hover {
   color: #1e90ff;
-}
-
-/* Mobile-specific adjustments */
-@media (max-width: 480px) {
-  .business-name {
-    font-size: 32px;
-  }
-  
-  .about-me h2 {
-    font-size: 24px;
-  }
-  
-  .about-me p {
-    font-size: 16px;
-  }
-  
-  .link {
-    padding: 15px 20px;
-    font-size: 16px;
-    min-width: 140px;
-  }
-
-  .inquiry-form {
-    padding: 20px;
-  }
-
-  .inquiry-form h2 {
-    font-size: 24px;
-  }
 }
