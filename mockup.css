@@ -51,7 +51,7 @@ body {
 /* About Me Section */
 .about-me {
   flex: 1;
-  text-align: left;
+  text-align: center;
   margin: 0;
 }
 
