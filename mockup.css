@@ -4,20 +4,15 @@ body {
   font-family: "Times New Roman", Times, serif;
   background: repeating-linear-gradient(
     to right,
-    #050C9C 0px,      /* dark blue */
+    #050C9C 0px,
     #050C9C 100px,
-    #3ABEF9 100px,    /* medium blue */
+    #3ABEF9 100px,
     #3ABEF9 200px,
-    #A7E6FF 200px,    /* baby blue */
+    #A7E6FF 200px,
     #A7E6FF 300px,
-    #FFD700 300px,    /* gold accent (moved to follow baby blue) */
-    #FFD700 305px,
-    #A7E6FF 305px,    /* continue baby blue after gold */
-    #A7E6FF 400px,
-    #FFD700 400px,    /* repeat gold */
-    #FFD700 405px
+    #FFD700 300px,
+    #FFD700 305px
   );
-}
 
   background-attachment: fixed;
 }
