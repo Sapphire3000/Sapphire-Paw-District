@@ -37,6 +37,7 @@ body {
   background-color: white;
   border-radius: 10px;
   padding: 20px;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
 }
 
 /* Profile Image */
@@ -67,7 +68,7 @@ body {
   color: #333;
 }
 
-/* Links Section */
+/* Links Section - Centered 2x2 Grid */
 .links {
   display: grid;
   grid-template-columns: repeat(2, auto);
@@ -129,7 +130,7 @@ body {
   font-family: "Times New Roman", Times, serif;
 }
 
-/* Behavior checkboxes */
+/* Behavior checkboxes - responsive fix */
 .behavior-options {
   display: flex;
   flex-wrap: wrap;
@@ -139,13 +140,17 @@ body {
 
 .behavior-options label {
   display: flex;
-  align-items: center; /* aligns checkbox with text */
-  gap: 6px;
-  flex: 1 1 300px;
-  min-width: 220px;
+  align-items: center; /* keeps checkbox aligned with text */
+  gap: 6px; /* space between checkbox and description */
+  flex: 1 1 auto; /* allows wrapping on smaller screens */
+  min-width: 0; /* allows shrink */
   white-space: normal;
   word-break: break-word;
   font-weight: normal;
+}
+
+.behavior-options input[type="checkbox"] {
+  flex-shrink: 0;
 }
 
 /* Policy text */
@@ -198,54 +203,31 @@ footer .credit a:hover {
   color: #1e90ff;
 }
 
-/* ----------------- MOBILE FIXES ----------------- */
-@media screen and (max-width: 414px) { /* iPhone 11 width */
+/* Mobile-specific adjustments */
+@media (max-width: 480px) {
+  .business-name {
+    font-size: 32px;
+  }
   
-  .profile-wrap {
-    flex-direction: column;
-    padding: 10px;
-    gap: 15px;
-  }
-
-  .empress-cyrus img {
-    width: 150px;
-    height: 150px;
-    margin: 0 auto;
-  }
-
   .about-me h2 {
-    font-size: 20px;
-    text-align: center;
+    font-size: 24px;
   }
-
+  
   .about-me p {
     font-size: 16px;
-    text-align: center;
   }
-
-  .links {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    align-items: center;
-  }
-
+  
   .link {
-    width: 80%;
+    padding: 15px 20px;
     font-size: 16px;
-    padding: 10px 0;
+    min-width: 140px;
   }
 
   .inquiry-form {
-    padding: 15px;
+    padding: 20px;
   }
 
   .inquiry-form h2 {
-    font-size: 22px;
-  }
-
-  .behavior-options label {
-    flex: 1 1 100%;
-    font-size: 14px;
+    font-size: 24px;
   }
 }
