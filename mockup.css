@@ -1,0 +1,203 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Times New Roman", Times, serif;
+  background: repeating-linear-gradient(
+    to right,
+    #050C9C 0px,
+    #050C9C 100px,
+    #3ABEF9 100px,
+    #3ABEF9 200px,
+    #A7E6FF 200px,
+    #A7E6FF 300px,
+    #FFD700 300px,
+    #FFD700 305px
+  );
+}
+
+/* Business Name */
+.business-name {
+  font-family: "Style Script", cursive;
+  font-weight: bold;
+  text-align: center;
+  font-size: 45px;
+  color: white;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+/* Wrapper around image + description */
+.profile-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  max-width: 900px;
+  margin: 40px auto;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* Profile Image */
+.empress-cyrus img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+  display: block;
+}
+
+/* About Me Section */
+.about-me {
+  flex: 1;
+  text-align: left;
+  margin: 0;
+}
+
+.about-me h2 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 28px;
+  color: #050C9C;
+}
+
+.about-me p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  color: #333;
+}
+
+/* Links Section - Centered 2x2 Grid */
+.links {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 40px 50px;
+  justify-content: center;
+  margin: 60px auto;
+}
+
+.link {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #ffffff;
+  color: #050C9C;
+  padding: 20px 30px;
+  border-radius: 12px; 
+  font-family: "Times New Roman", Times, serif; 
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  min-width: 180px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.link:hover {
+  background-color: #FFD93D;
+  color: #050C9C;
+}
+
+/* Inquiry Form Section */
+.inquiry-form {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.inquiry-form h2 {
+  text-align: center;
+  font-size: 28px;
+  color: #050C9C;
+}
+
+.inquiry-form label {
+  display: block;
+  margin: 12px 0 5px;
+  font-weight: bold;
+}
+
+.inquiry-form input,
+.inquiry-form select,
+.inquiry-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: "Times New Roman", Times, serif;
+}
+
+
+/* Container for checkboxes */
+.behavior-options {
+  display: flex;
+  flex-direction: column; /* stack each option vertically */
+  gap: 8px;               /* space between options */
+  margin: 10px 0;
+}
+
+/* Each label with checkbox and text inline */
+.behavior-options label {
+  display: flex;          /* inline the checkbox and text */
+  align-items: center;    /* vertical alignment */
+  gap: 6px;               /* space between box and text */
+  font-weight: normal;
+}
+
+/* Override full-width for checkboxes */
+.behavior-options input[type="checkbox"] {
+  width: auto;            /* remove the 100% width from generic input rule */
+  margin: 0;              /* remove extra default margin */
+}
+
+/* Policy text */
+.policy {
+  font-size: 14px;
+  color: #333;
+  margin: 15px 0;
+}
+
+/* Center the Submit Button */
+.inquiry-form button[type="submit"] {
+  display: block;
+  margin: 20px auto 0 auto;
+  background-color: #FFD93D;
+  color: #050C9C;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.inquiry-form button[type="submit"]:hover {
+  background-color: #FFC700;
+}
+
+/* Footer */
+footer {
+  background-color: #000;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid gold;
+}
+
+footer .credit {
+  color: white;
+  font-size: 14px;
+  margin: 0;
+}
+
+footer .credit a {
+  color: gold;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer .credit a:hover {
+  color: #1e90ff;
+}
