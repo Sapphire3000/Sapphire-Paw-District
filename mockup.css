@@ -29,7 +29,7 @@ body {
 /* Wrapper around image + description */
 .profile-wrap {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   gap: 20px;
   max-width: 900px;
