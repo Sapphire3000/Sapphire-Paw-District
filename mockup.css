@@ -1,14 +1,21 @@
 body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Times New Roman", Times, serif;
   background: repeating-linear-gradient(
-    90deg,
-    #0a1f44, /* dark navy */
-    #0a1f44 100px,
-    #3a6ea5 100px, /* medium blue */
-    #3a6ea5 200px,
-    #87ceeb 200px, /* baby blue */
-    #87ceeb 300px,
-    #d4af37 300px, /* gold accent */
-    #d4af37 310px
+    to right,
+    #050C9C 0px,      /* dark blue */
+    #050C9C 100px,
+    #3ABEF9 100px,    /* medium blue */
+    #3ABEF9 200px,
+    #A7E6FF 200px,    /* baby blue */
+    #A7E6FF 300px,
+    #FFD700 300px,    /* gold accent (moved to follow baby blue) */
+    #FFD700 305px,
+    #A7E6FF 305px,    /* continue baby blue after gold */
+    #A7E6FF 400px,
+    #FFD700 400px,    /* repeat gold */
+    #FFD700 405px
   );
 }
 
